@@ -100,7 +100,7 @@ Route::group(['prefix' => 'api'], function () {
     Route::post('/access/validate-token', [DashboardController::class, 'validateInvitation']);
 
     Route::group(['middleware' => 'checkAuth'], function () {
-        //Route::post('/logout', [UserController::class, 'logout']);
+        Route::post('/logout', [UserController::class, 'logout']);
         Route::post('/change/password', [UserController::class, 'changePassword']);
 
         //projects
